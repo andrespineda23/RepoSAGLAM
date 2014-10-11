@@ -6,6 +6,7 @@
 package Entidades;
 
 import java.io.Serializable;
+import java.math.BigInteger;
 import java.util.Collection;
 import javax.persistence.Basic;
 import javax.persistence.Column;
@@ -40,7 +41,7 @@ public class AreaTrabajo implements Serializable {
     @Basic(optional = false)
     @NotNull
     @Column(name = "secuencia")
-    private Long secuencia;
+    private BigInteger secuencia;
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 50)
@@ -65,11 +66,11 @@ public class AreaTrabajo implements Serializable {
     public AreaTrabajo() {
     }
 
-    public AreaTrabajo(Long secuencia) {
+    public AreaTrabajo(BigInteger secuencia) {
         this.secuencia = secuencia;
     }
 
-    public AreaTrabajo(Long secuencia, String codigo, int cantmaxpersonas, boolean estadouso, String nombrearea) {
+    public AreaTrabajo(BigInteger secuencia, String codigo, int cantmaxpersonas, boolean estadouso, String nombrearea) {
         this.secuencia = secuencia;
         this.codigo = codigo;
         this.cantmaxpersonas = cantmaxpersonas;
@@ -77,11 +78,11 @@ public class AreaTrabajo implements Serializable {
         this.nombrearea = nombrearea;
     }
 
-    public Long getSecuencia() {
+    public BigInteger getSecuencia() {
         return secuencia;
     }
 
-    public void setSecuencia(Long secuencia) {
+    public void setSecuencia(BigInteger secuencia) {
         this.secuencia = secuencia;
     }
 

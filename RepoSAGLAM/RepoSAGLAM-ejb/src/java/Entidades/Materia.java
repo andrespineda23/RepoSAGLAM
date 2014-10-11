@@ -6,6 +6,7 @@
 package Entidades;
 
 import java.io.Serializable;
+import java.math.BigInteger;
 import java.util.Collection;
 import javax.persistence.Basic;
 import javax.persistence.Column;
@@ -39,7 +40,7 @@ public class Materia implements Serializable {
     @Basic(optional = false)
     @NotNull
     @Column(name = "secuencia")
-    private Long secuencia;
+    private BigInteger secuencia;
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 40)
@@ -61,22 +62,22 @@ public class Materia implements Serializable {
     public Materia() {
     }
 
-    public Materia(Long secuencia) {
+    public Materia(BigInteger secuencia) {
         this.secuencia = secuencia;
     }
 
-    public Materia(Long secuencia, String nombre, String codigo, String planestudio) {
+    public Materia(BigInteger secuencia, String nombre, String codigo, String planestudio) {
         this.secuencia = secuencia;
         this.nombre = nombre;
         this.codigo = codigo;
         this.planestudio = planestudio;
     }
 
-    public Long getSecuencia() {
+    public BigInteger getSecuencia() {
         return secuencia;
     }
 
-    public void setSecuencia(Long secuencia) {
+    public void setSecuencia(BigInteger secuencia) {
         this.secuencia = secuencia;
     }
 

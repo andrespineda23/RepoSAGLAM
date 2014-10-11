@@ -6,6 +6,7 @@
 package Entidades;
 
 import java.io.Serializable;
+import java.math.BigInteger;
 import java.util.Collection;
 import java.util.Date;
 import javax.persistence.Basic;
@@ -46,7 +47,7 @@ public class Prestamo implements Serializable {
     @Basic(optional = false)
     @NotNull
     @Column(name = "secuencia")
-    private Long secuencia;
+    private BigInteger secuencia;
     @Basic(optional = false)
     @NotNull
     @Column(name = "fecha")
@@ -82,11 +83,11 @@ public class Prestamo implements Serializable {
     public Prestamo() {
     }
 
-    public Prestamo(Long secuencia) {
+    public Prestamo(BigInteger secuencia) {
         this.secuencia = secuencia;
     }
 
-    public Prestamo(Long secuencia, Date fecha, int horainicial, int horafinal, String tipoactividad, String estadosolicitud) {
+    public Prestamo(BigInteger secuencia, Date fecha, int horainicial, int horafinal, String tipoactividad, String estadosolicitud) {
         this.secuencia = secuencia;
         this.fecha = fecha;
         this.horainicial = horainicial;
@@ -95,11 +96,11 @@ public class Prestamo implements Serializable {
         this.estadosolicitud = estadosolicitud;
     }
 
-    public Long getSecuencia() {
+    public BigInteger getSecuencia() {
         return secuencia;
     }
 
-    public void setSecuencia(Long secuencia) {
+    public void setSecuencia(BigInteger secuencia) {
         this.secuencia = secuencia;
     }
 

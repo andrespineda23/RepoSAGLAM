@@ -6,6 +6,7 @@
 package Entidades;
 
 import java.io.Serializable;
+import java.math.BigInteger;
 import java.util.Collection;
 import javax.persistence.Basic;
 import javax.persistence.Column;
@@ -43,7 +44,7 @@ public class Usuario implements Serializable {
     @Basic(optional = false)
     @NotNull
     @Column(name = "secuencia")
-    private Long secuencia;
+    private BigInteger secuencia;
     @Basic(optional = false)
     @NotNull
     @Size(min = 1, max = 40)
@@ -88,11 +89,11 @@ public class Usuario implements Serializable {
     public Usuario() {
     }
 
-    public Usuario(Long secuencia) {
+    public Usuario(BigInteger secuencia) {
         this.secuencia = secuencia;
     }
 
-    public Usuario(Long secuencia, String correoelectronico, String contrasena, String tipousuario, String nombres, String apellidos, boolean activo, String numerodocumento) {
+    public Usuario(BigInteger secuencia, String correoelectronico, String contrasena, String tipousuario, String nombres, String apellidos, boolean activo, String numerodocumento) {
         this.secuencia = secuencia;
         this.correoelectronico = correoelectronico;
         this.contrasena = contrasena;
@@ -103,11 +104,11 @@ public class Usuario implements Serializable {
         this.numerodocumento = numerodocumento;
     }
 
-    public Long getSecuencia() {
+    public BigInteger getSecuencia() {
         return secuencia;
     }
 
-    public void setSecuencia(Long secuencia) {
+    public void setSecuencia(BigInteger secuencia) {
         this.secuencia = secuencia;
     }
 

@@ -6,6 +6,7 @@
 package Entidades;
 
 import java.io.Serializable;
+import java.math.BigInteger;
 import java.util.Date;
 import javax.persistence.Basic;
 import javax.persistence.Column;
@@ -42,7 +43,7 @@ public class ResultadosActividades implements Serializable {
     @Basic(optional = false)
     @NotNull
     @Column(name = "secuencia")
-    private Long secuencia;
+    private BigInteger secuencia;
     @Basic(optional = false)
     @NotNull
     @Column(name = "fecha")
@@ -70,22 +71,22 @@ public class ResultadosActividades implements Serializable {
     public ResultadosActividades() {
     }
 
-    public ResultadosActividades(Long secuencia) {
+    public ResultadosActividades(BigInteger secuencia) {
         this.secuencia = secuencia;
     }
 
-    public ResultadosActividades(Long secuencia, Date fecha, int hora, String areatrabajo) {
+    public ResultadosActividades(BigInteger secuencia, Date fecha, int hora, String areatrabajo) {
         this.secuencia = secuencia;
         this.fecha = fecha;
         this.hora = hora;
         this.areatrabajo = areatrabajo;
     }
 
-    public Long getSecuencia() {
+    public BigInteger getSecuencia() {
         return secuencia;
     }
 
-    public void setSecuencia(Long secuencia) {
+    public void setSecuencia(BigInteger secuencia) {
         this.secuencia = secuencia;
     }
 

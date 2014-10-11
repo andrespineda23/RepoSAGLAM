@@ -6,6 +6,7 @@
 package Entidades;
 
 import java.io.Serializable;
+import java.math.BigInteger;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -34,7 +35,7 @@ public class MateriaUsuario implements Serializable {
     @Basic(optional = false)
     @NotNull
     @Column(name = "secuencia")
-    private Long secuencia;
+    private BigInteger secuencia;
     @JoinColumn(name = "usuario", referencedColumnName = "secuencia")
     @ManyToOne
     private Usuario usuario;
@@ -45,15 +46,15 @@ public class MateriaUsuario implements Serializable {
     public MateriaUsuario() {
     }
 
-    public MateriaUsuario(Long secuencia) {
+    public MateriaUsuario(BigInteger secuencia) {
         this.secuencia = secuencia;
     }
 
-    public Long getSecuencia() {
+    public BigInteger getSecuencia() {
         return secuencia;
     }
 
-    public void setSecuencia(Long secuencia) {
+    public void setSecuencia(BigInteger secuencia) {
         this.secuencia = secuencia;
     }
 
