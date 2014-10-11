@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:body>
+        <ui:composition template="/Template.xhtml" >
+            <ui:define name="body">                  
+                <h:form id="form">
+
+                    <p:panel  id="PanelOpciones" header="Opciones" style="position: absolute; top: 120px; left: 100px; width: 200px; height: 450px;font-size: 12px" > 
+
+                        <p:commandButton id="RESERVAR" value="Reservar" style="position: absolute; top: 50px; left: 10px; width: 190px; text-align: center" disabled="true"/>
+                        <p:commandButton id="PRESTAMOS" value="Prestamos" style="position: absolute; top: 100px; left: 10px; width: 190px; text-align: center" disabled="true"/>
+                        <p:commandButton id="DOC_PRACTICAS" value="Doc. Practicas" style="position: absolute; top: 150px; left: 10px; width: 190px; text-align: center" disabled="true"/>
+                        <p:commandButton id="GUIAS" value="Guias Laboratorio" style="position: absolute; top: 200px; left: 10px; width: 190px; text-align: center" disabled="true"/>
+                        <p:commandButton id="ESTADISTICAS" value="Estadisticas" style="position: absolute; top: 250px; left: 10px; width: 190px; text-align: center" disabled="true"/>
+                        <p:commandButton id="USUARIO" value="Usuario" style="position: absolute; top: 300px; left: 10px; width: 190px; text-align: center" disabled="true"/>
+                        <p:commandButton id="MATERIA" value="Asociar Materias" style="position: absolute; top: 350px; left: 10px; width: 190px; text-align: center" disabled="true"/>
+                        <p:commandButton id="CERRAR_SESION" value="Cerrar Sesion" style="position: absolute; top: 400px; left: 10px; width: 190px; text-align: center" disabled="true"/>
+
+                    </p:panel>
+
+                    <p:panel  id="PanelTotal" header="SAGLAM" style="position: absolute; top: 120px; left: 350px; width: 874px; height: 450px;font-size: 12px" > 
+
+                        <strong><h:outputText style="position: absolute; top: 60px; left: 10px" value="Informacion Usuario Conectado"/></strong>
+                        <p:commandButton id="RECORDAR_PASS" value="Recordar Contraseña" style="position: absolute; top: 45px; left: 460px; text-align: center"/>
+                        <p:commandButton id="INGRESAR" value="Ingresar" style="position: absolute; top: 45px; left: 650px; text-align: center"/>
+                        <p:commandButton id="REGISTRAR" value="Registrarse" style="position: absolute; top: 45px; left: 760px; text-align: center" onclick="RegistroNuevoUsuario.show();" process="@this"/>
+
+                        <fieldset style="position: absolute; left: 10px; top: 100px;width: 825px; height: 310px; border-radius: 10px; ">
+                            <legend style="color: blue"><strong>Informacion del Proyecto</strong></legend>
+
+                        </fieldset>
+
+
+                    </p:panel>
+
+                    <p:dialog header="Registro Nuevo Usuario" draggable="false" resizable="false"
+                              closable="false" id="RegistroNuevoUsuario" widgetVar="RegistroNuevoUsuario" showEffect="fade" hideEffect="fade"
+                              width="435" modal="true" style="font-size: 12px;">
+                        
+                        <center><strong><h:outputText value="Ingrese la informacion del nuevo usuario" style="font-size: 14px; color: blue; position: relative; top: 10px" /></strong></center> 
+                        
+                        <h:outputText value="Nombres: " style="position: absolute; left: 50px; top: 70px;"/>
+                        <h:outputText value="Apellidos: " style="position: absolute; left: 50px; top: 110px;"/>
+                        <h:outputText value="Correo Electronico: " style="position: absolute; left: 50px; top: 140px;"/>
+                        <h:outputText value="N# Documento: " style="position: absolute; left: 50px; top: 170px;"/>
+                        <h:outputText value="Contraseña: " style="position: absolute; left: 50px; top: 210px;"/>
+                        <h:outputText value="Tipo Usuario: " style="position: absolute; left: 50px; top: 214px;"/>
+                        
+                        <p:commandButton value="Aceptar" style="position: absolute; left: 300px; top: 400px"/>
+                        <p:commandButton value="Cancelar" style="position: absolute; left: 300px; top: 400px"/>
+                        
+                    </p:dialog>
+
+                </h:form>
+            </ui:define>
+        </ui:composition>
+    </h:body>
+</html>
+
